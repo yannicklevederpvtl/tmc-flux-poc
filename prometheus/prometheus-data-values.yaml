@@ -1,7 +1,7 @@
 ---
 ingress:
   enabled: true
-  virtual_host_fqdn: "prometheus.system.tanzu"
+  virtual_host_fqdn: "prometheus.yldemotanzu.com"
   prometheus_prefix: "/"
   alertmanager_prefix: "/alertmanager/"
   prometheusServicePort: 80
