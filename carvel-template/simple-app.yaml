@@ -1,12 +1,12 @@
 #@ load("@ytt:data", "data")
 
 #@ def labels():
-app.kubernetes.io/name: "simple-app"
-app.kubernetes.io/instance: "simple-app-abcxyz"
+app.kubernetes.io/name: simple-app
+app.kubernetes.io/instance: simple-app-abcxyz
 app.kubernetes.io/version: #@ data.values.version
-app.kubernetes.io/component: "Service"
-app.kubernetes.io/part-of: "simple-app"
-app.kubernetes.io/managed-by: "Carvel"
+app.kubernetes.io/component: Service
+app.kubernetes.io/part-of: simple-app
+app.kubernetes.io/managed-by: Carvel
 #@ end
 
 ---
@@ -26,7 +26,7 @@ kind: Deployment
 metadata:
   namespace: default
   name: simple-app
-  labels: #@ labels()s
+  labels: #@ labels()
 spec:
   selector:
     matchLabels: #@ labels()
