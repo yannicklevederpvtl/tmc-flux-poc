@@ -43,3 +43,5 @@ spec:
         env:
         - name: HELLO_MSG
           value: #@ data.values.hello_msg
+        - name: VERSION
+          value: #@ data.values.version
