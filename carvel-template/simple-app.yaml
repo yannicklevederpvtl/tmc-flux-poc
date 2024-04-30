@@ -3,7 +3,6 @@
 #@ def labels():
 app.kubernetes.io/name: simple-app
 app.kubernetes.io/instance: simple-app-abcxyz
-app.kubernetes.io/version: #@ data.values.version
 app.kubernetes.io/component: Service
 app.kubernetes.io/part-of: simple-app
 app.kubernetes.io/managed-by: Carvel
