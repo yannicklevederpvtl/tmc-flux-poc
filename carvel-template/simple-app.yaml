@@ -7,9 +7,6 @@ app.kubernetes.io/component: Service
 app.kubernetes.io/part-of: simple-app
 app.kubernetes.io/managed-by: Carvel
 #@ end
-#@ def version():
-app.kubernetes.io/version: #@ data.values.version
-#@ end
 ---
 apiVersion: v1
 kind: Service
