@@ -10,6 +10,12 @@ kind: Service
 metadata:
   namespace: default
   name: simple-app
+  app.kubernetes.io/name: simple-app
+  app.kubernetes.io/instance: simple-app-abcxyz
+  app.kubernetes.io/version: #@ data.values.version
+  app.kubernetes.io/component: Service
+  app.kubernetes.io/part-of: simple-app
+  app.kubernetes.io/managed-by: Carvel
 spec:
   ports:
   - port: #@ data.values.svc_port
@@ -21,6 +27,12 @@ kind: Deployment
 metadata:
   namespace: default
   name: simple-app
+  app.kubernetes.io/name: simple-app
+  app.kubernetes.io/instance: simple-app-abcxyz
+  app.kubernetes.io/version: #@ data.values.version
+  app.kubernetes.io/component: Deployment
+  app.kubernetes.io/part-of: simple-app
+  app.kubernetes.io/managed-by: Carvel
 spec:
   selector:
     matchLabels: #@ labels()
