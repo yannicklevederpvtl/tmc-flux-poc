@@ -27,7 +27,9 @@ kind: Deployment
 metadata:
   namespace: default
   name: simple-app
-  labels: #@ labels() version()
+  labels: 
+    #@ labels()
+    #@ version()
 spec:
   selector:
     matchLabels: #@ labels()
