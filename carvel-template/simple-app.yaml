@@ -1,7 +1,7 @@
 #@ load("@ytt:data", "data")
 
 #@ def labels():
-app.kubernetes.io/name: simple-app
+app.kubernetes.io/name: #@ data.values.app_name
 app.kubernetes.io/instance: simple-app-abcxyz
 app.kubernetes.io/component: Service
 app.kubernetes.io/part-of: simple-app
