@@ -1,0 +1,16 @@
+apiVersion: kappctrl.k14s.io/v1alpha1
+kind: App
+metadata:
+  name: simple-app
+  namespace: default
+spec:
+  serviceAccountName: default-ns-sa
+  fetch:
+  - git:
+      url: https://github.com/yannicklevederpvtl/tmc-flux-poc
+      ref: origin/main
+      subPath: carvel-app/simpleapp-onerepo
+  template:
+  - ytt: {}
+  deploy:
+  - kapp: {}
